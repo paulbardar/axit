@@ -1,0 +1,25 @@
+/* buttons */
+.btn {
+	white-space: normal;
+	.fa {
+		margin-left: 5px;
+	}
+
+	&-block {
+
+	}
+
+	&-sm {
+
+	}
+
+	&-lg {
+
+	}
+}
+.btn-outline-primary {
+	padding: 0.8rem 3rem;
+	border: 3px solid $white;
+	color: $white;
+	background: transparent;
+}

@@ -1,0 +1,29 @@
+.contact {
+	padding: 10rem 0 8.1rem;
+}
+.contact-form {
+	text-align: center;
+	.row {
+		margin-bottom: 1.3rem;
+	}
+	.form-control {
+		max-width: 52.7rem;
+		border: none;
+		border-radius: 0;
+		border-bottom: 1px solid $xlight-gray;
+		padding: 0.7rem 1.2rem 0.5rem;
+		margin-bottom: 2.8rem;
+		&::placeholder {
+			color: $light-gray;
+		}
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+	textarea.form-control {
+		resize: vertical;
+		min-height: 15.6rem;
+		margin-left: auto;
+	}
+}

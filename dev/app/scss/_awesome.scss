@@ -1,0 +1,26 @@
+.awesome {
+	padding: 10rem 0 8rem;
+	.awesome-item {
+		text-align: center;
+		margin-bottom: 2rem;
+		.ico-holder {
+			width: 7rem;
+			height: 7rem;
+			border-radius: 50%;
+			border: 2px solid $light-orange;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto 2.6rem;
+			i {
+				color: $light-orange;
+				font-size: 3rem;
+			}
+		}
+		h3 {
+			letter-spacing: 0.02em;
+			margin-bottom: 2rem;
+		}
+	}
+
+}

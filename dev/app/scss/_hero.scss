@@ -1,0 +1,146 @@
+.hero {
+	min-height: 64.2rem;
+	// padding: 10rem 0 13.8rem;
+	overflow: hidden;
+	position: relative;
+	background: $black;
+	display: flex;
+	align-items: center;
+	@include media-breakpoint-down(md) {
+		padding: 3rem 0;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, 0.51);
+		z-index: 1;
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+		padding-bottom: 3.8rem;
+		@include media-breakpoint-down(md) {
+			padding-bottom: 0;
+		}
+	}
+	.hero-content {
+		padding-left: 0.7rem;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 3rem;
+		}
+	}
+	h1 {
+		margin-bottom: 2.4rem;
+	}
+	h2 {
+		color: $white;
+		margin-bottom: 7rem;
+		text-transform: uppercase;
+		position: relative;
+		@include after-title-line;
+		&:before {
+			background-color: $white;
+		}
+	}
+	p {
+		max-width: 50rem;
+		font-size: $font-size-secondary;
+		letter-spacing: -0.0125em;
+		margin-bottom: 4.3rem;
+	}
+}
+.login-form {
+	position: relative;
+	max-width: 36rem;
+	margin-left: auto;
+	margin-right: 0.7rem;
+	@include media-breakpoint-down(md) {
+		max-width: 100%;
+	}
+	h3 {
+		color: $dark;
+		font-weight: bold;
+		padding: 1.6rem 0 1.5rem;
+		text-transform: capitalize;
+		background-color: $light-gray2;
+		text-align: center;
+		border-radius: 0.5rem 0.5rem 0 0;
+		letter-spacing: 0.03em;
+		span {
+			color: $orange;
+			text-transform: uppercase;
+		}
+	}
+	form {
+		background-color: $white;
+		border-radius: 0 0 0.5rem 0.5rem;
+		padding-top: 1.6rem;
+	}
+	.field {
+		width: 80%;
+		margin: 0 auto;
+		&-name {
+			margin-bottom: 2.1rem;
+		}
+		&-email {
+			margin-bottom: 3.5rem;
+		}
+		&-password {
+			margin-bottom: 4.7rem;
+		}
+	}
+	.form-control {
+		width: 100%;
+		display: block;
+		// margin: 0 auto;
+		border: none;
+		padding: 17px 0 7px;
+		padding-left: 15px;
+		border-bottom: 1px solid $xlight-gray;
+		&::placeholder,
+		&::-webkit-input-placeholder,
+		&:-ms-input-placeholder,
+		&:-moz-placeholder {
+			color: $xlight-gray;
+			font-family: $opensans, sans-serif;
+			line-height: $line-height-thirdly;
+			text-transform: capitalize;
+		}
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+		&.error {
+			border-color: red;
+		}
+	}
+	input[type=submit] {
+		padding: 1.8rem 0 1.6rem;
+		width: 100%;
+		color: $white;
+		font-size: 1.5rem;
+		text-transform: capitalize;
+		background-color: $orange;
+		border-radius: 0 0 0.5rem 0.5rem;
+		font-size: 1.5rem;
+		font-weight: 400;
+		letter-spacing: 0.01333em;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			background-color: darken($orange, 10%);
+		}
+	}
+	label.error {
+		color: red;
+		font-size: 1.2rem;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0.5rem);
+	}
+}

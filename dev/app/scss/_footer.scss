@@ -1,0 +1,29 @@
+/* footer */
+#footer {
+	padding: 1.5rem 0 1rem;
+	background-color: $black;
+
+}
+.footer-links {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	color: $light-gray;
+	margin-left: -2.4rem;
+	margin-bottom: 0.3rem;
+	@include media-breakpoint-down(sm) {
+		flex-wrap: wrap;
+	}
+	li {
+		margin-left: 2.9rem;
+		margin-bottom: 0.5rem;
+		font-size: 2.3rem;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+.copy {
+	font-size: 1.2rem;
+	text-align: center;
+}

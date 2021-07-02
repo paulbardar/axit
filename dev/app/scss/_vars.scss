@@ -1,0 +1,80 @@
+// vars
+$images: '../images/';
+$fonts: '../fonts/';
+$fa-font-path: '../fonts/fontawesome';
+
+// fonts
+$iconfont: 'FontAwesome';
+$opensans: 'Open Sans', sans-serif;
+$raleway: 'Raleway', sans-serif;
+
+// bootstrap grid
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$grid-gutter-width-mobile: $grid-gutter-width;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1340px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1146px
+);
+
+// colors
+$white: #fff;
+$black: #000;
+$gray: #707070;
+$dark: #333333;
+$darken: #212121;
+$orange: #ff9b51;
+$light-orange: #ff8b38;
+$opacity-white: rgba($white, 0.8);
+$xlight-gray: #bdbdbd;
+$gray: #86878b;
+$light-gray: #cccccc;
+$light-gray2: #f5f5f5;
+
+// base vars
+$text-color-base: $gray;
+$text-color-secondary: $white;
+$body-bg: $white;
+$font-family-base: $opensans;
+$font-size-base: 1.4rem;
+$font-size-secondary: 1.6rem;
+$font-size-thirdly: 2rem;
+$font-size-fourthly: 1.5rem;
+$font-weight-base: 400;
+$line-height-base: 1.429;
+$line-height-thirdly: 2.4rem;
+$line-height-secondary: 1.438;
+$line-height-title: 1.2;
+$links-color-base: inherit;
+$headings-font-family: $raleway;
+$headings-font-family-secondary: $opensans;
+$headings-font-weight: 300;
+$link-hover-color: $orange;
+
+$btn-color: $white;
+$btn-bg: $light-orange;
+$bg-btn-secondary: transparent;
+$transition: all .3s ease;
+
+$font-title: $headings-font-family;
+$fs-h1-title: 6rem;
+$fs-h2-title: 3.6rem;
+$fs-h3-title: 2rem;
+$fs-h4-title: 1.8rem;
+$fs-h5-title: 1.6rem;
+$fs-h6-title: 1.4rem;
+
+// dev2
+// dev3
+// dev4
