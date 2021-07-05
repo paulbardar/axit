@@ -17076,7 +17076,7 @@ figure {
 
 .fader {
 	position: fixed;
-	z-index: 9;
+	z-index: -1;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -17089,6 +17089,10 @@ figure {
 }
 
 @media (max-width: 767.98px) {
+	.scrolled.up.menu-opened #header .container .logo {
+		-webkit-transform: translateX(-23rem);
+		        transform: translateX(-23rem);
+	}
 	#header .container .open-menu {
 		position: absolute;
 		top: 2rem;

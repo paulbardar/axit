@@ -52,7 +52,7 @@
 }
 .fader {
 	position: fixed;
-	z-index: 9;
+	z-index: -1;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -63,58 +63,65 @@
 	transition: opacity .3s ease-out, visibility .3s ease-out;
 }
 @include media-breakpoint-down(md) {
-	#header .container {
-		.open-menu {
-			position: absolute;
-			top: 2rem;
-			right: 3rem;
-			width: 3rem;
-			height: 3rem;
-			border: 0.3rem solid transparent;
-			display: block;
-			font-size: 0;
-			line-height: 0;
-			z-index: 11;
-			transition: transform .3s ease-out;
-			.scrolled.up & {
-				transform: translateX(0);
-			}
-			.scrolled.up.menu-opened & {
-				transform: translateX(-23rem);
-			}
-			span {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 100%;
-				transform: translate(-50%, -50%);
-				border-bottom: 0.3rem solid $white;
-				height: 0;
-
-				@for $i from 1 through 3 {
-					&:nth-child(#{$i}) {
-						@if ($i == 1) {
-							margin-top: -1rem;
-						}
-						@if ($i == 3) {
-							margin-top: 1rem;
-						}
-					}
+	#header  {
+		.container {
+			.logo {
+				.scrolled.up.menu-opened & {
+					transform: translateX(-23rem);
 				}
+			}
+			.open-menu {
+				position: absolute;
+				top: 2rem;
+				right: 3rem;
+				width: 3rem;
+				height: 3rem;
+				border: 0.3rem solid transparent;
+				display: block;
+				font-size: 0;
+				line-height: 0;
+				z-index: 11;
+				transition: transform .3s ease-out;
+				.scrolled.up & {
+					transform: translateX(0);
+				}
+				.scrolled.up.menu-opened & {
+					transform: translateX(-23rem);
+				}
+				span {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 100%;
+					transform: translate(-50%, -50%);
+					border-bottom: 0.3rem solid $white;
+					height: 0;
 
-				.menu-opened & {
 					@for $i from 1 through 3 {
 						&:nth-child(#{$i}) {
 							@if ($i == 1) {
-								margin-top: 0;
-								transform: translate(-50%, -50%) rotate(45deg);
+								margin-top: -1rem;
 							}
 							@if ($i == 3) {
-								margin-top: 0;
-								transform: translate(-50%, -50%) rotate(-45deg);
+								margin-top: 1rem;
 							}
-							@if ($i == 2) {
-								display: none;
+						}
+					}
+
+					.menu-opened & {
+						@for $i from 1 through 3 {
+							&:nth-child(#{$i}) {
+								@if ($i == 1) {
+									margin-top: 0;
+									transform: translate(-50%, -50%) rotate(45deg);
+								}
+								@if ($i == 3) {
+									margin-top: 0;
+									transform: translate(-50%, -50%) rotate(-45deg);
+								}
+								@if ($i == 2) {
+									display: none;
+								}
 							}
 						}
 					}

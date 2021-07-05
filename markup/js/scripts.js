@@ -162,6 +162,7 @@ const faderSpan = document.createElement('span');
 // mobile menu
 function mobileMenu() {
 	const openBtn = document.querySelector('.open-menu'),
+		menuItem = document.querySelectorAll('.menu-link'),
 		fader = document.querySelector('.fader');
 
 	openBtn.addEventListener('click', function(event) {
@@ -175,6 +176,13 @@ function mobileMenu() {
 	fader.addEventListener('click', function(){
 		document.body.classList.toggle('menu-opened');
 	});
+	for (let i = 0; i < menuItem.length; i++) {
+		menuItem[i].addEventListener('click', function(event) {
+			if ( document.body.classList.contains('menu-opened') ) {
+				document.body.classList.remove('menu-opened');
+			}
+		});
+	}
 };
 
 
